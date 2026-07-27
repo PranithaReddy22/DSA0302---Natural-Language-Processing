@@ -1,6 +1,4 @@
-# DFA for strings ending with "ab"
 
-# Transition table
 transitions = {
     'q0': {'a': 'q1', 'b': 'q0'},
     'q1': {'a': 'q1', 'b': 'q2'},
@@ -10,7 +8,7 @@ transitions = {
 initial_state = 'q0'
 final_state = 'q2'
 
-# Number of input strings
+
 n = int(input("Enter number of strings: "))
 
 for i in range(n):
