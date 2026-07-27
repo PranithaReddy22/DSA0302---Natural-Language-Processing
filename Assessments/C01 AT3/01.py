@@ -1,11 +1,11 @@
 import re
 
-# Input from user
+
 email = input("Enter Email: ")
 password = input("Enter Password: ")
 mobile = input("Enter Mobile Number: ")
 
-# Email Validation
+
 email_pattern = r'^[A-Za-z][A-Za-z0-9._]*@[A-Za-z]+\.(com|org|edu|net|in)$'
 
 if re.fullmatch(email_pattern, email):
@@ -13,7 +13,7 @@ if re.fullmatch(email_pattern, email):
 else:
     print("Invalid Email")
 
-# Password Validation
+
 password_pattern = r'^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$%&!])[A-Za-z\d@#$%&!]{8,}$'
 
 if re.fullmatch(password_pattern, password):
@@ -21,7 +21,7 @@ if re.fullmatch(password_pattern, password):
 else:
     print("Weak Password")
 
-# Mobile Number Validation
+
 mobile_pattern = r'^[6-9]\d{9}$'
 
 if re.fullmatch(mobile_pattern, mobile):
