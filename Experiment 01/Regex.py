@@ -1,17 +1,22 @@
 import re
 
-text = "Welcome to Python Programming"
+print("Program Started")
 
-# Match pattern at the beginning
-match = re.match("Welcome", text)
+text = input("Enter a sentence: ")
+
+print("You entered:", text)
+
+pattern1 = input("Enter the pattern to match at the beginning: ")
+pattern2 = input("Enter the pattern to search: ")
+
+match = re.match(pattern1, text)
 
 if match:
     print("Match found:", match.group())
 else:
     print("No match found")
 
-# Search pattern anywhere in the text
-search = re.search("Python", text)
+search = re.search(pattern2, text)
 
 if search:
     print("Search found:", search.group())

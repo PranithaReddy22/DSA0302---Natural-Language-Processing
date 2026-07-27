@@ -2,17 +2,17 @@ import nltk
 from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize
 
-# Download tokenizer (run once)
-nltk.download('punkt')
-
-text = "The students are studying computers and playing games."
-
-# Tokenize the text
-words = word_tokenize(text)
-
-# Create stemmer object
+# Create Porter Stemmer object
 ps = PorterStemmer()
 
-print("Original Words\tStemmed Words")
+# Take input from user
+text = input("Enter a sentence: ")
+
+# Tokenize the sentence
+words = word_tokenize(text)
+
+print("\nOriginal Word\t\tStemmed Word")
+print("-" * 35)
+
 for word in words:
-    print(word, "\t\t", ps.stem(word))
+    print(f"{word}\t\t{ps.stem(word)}")

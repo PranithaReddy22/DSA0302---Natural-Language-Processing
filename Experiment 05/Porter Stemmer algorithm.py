@@ -1,12 +1,16 @@
-import nltk
 from nltk.stem import PorterStemmer
 
 # Create Porter Stemmer object
 ps = PorterStemmer()
 
-# List of words
-words = ["playing", "studies", "running", "happily", "computers"]
+# Take input from user
+text = input("Enter words separated by space: ")
 
-print("Original Word\tStemmed Word")
+# Convert input string into list
+words = text.split()
+
+print("\nOriginal Word\tStemmed Word")
+print("-" * 30)
+
 for word in words:
-    print(word, "\t", ps.stem(word))
+    print(f"{word}\t\t{ps.stem(word)}")
