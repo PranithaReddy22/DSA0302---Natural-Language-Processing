@@ -27,6 +27,6 @@ def fsa(string):
     else:
         print("Rejected")
 
-# Input
+
 s = input("Enter a string: ")
 fsa(s)
